@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateFibonacciSequence(n) {
+    const fibonacciSequence = [0, 1];
+
+    while (fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2] <= n) {
+        const nextNumber = fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2];
+        fibonacciSequence.push(nextNumber);
+    }
+
+    return fibonacciSequence;
+}
+const inputNumber = prompt("Enter a number:");
+const n = parseInt(inputNumber);
+
+const fibonacciSequence = generateFibonacciSequence(n);
+
+console.log(`Fibonacci Sequence up to ${n}:`, fibonacciSequence);
+
+    </script>
+</body>
+</html>

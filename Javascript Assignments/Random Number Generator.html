@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number Generator</title>
+</head>
+<body>
+    <script>
+        let min=prompt("Random Number Generator\nEnter the minimum number:")
+        let max=prompt("Enter the Maximim number:")
+        min=parseInt(min)
+        max=parseInt(max)
+        let randomNumber=Math.floor(Math.random()*max)+min;
+        alert("Random Number:\n"+randomNumber)
+    </script>
+</body>
+</html>

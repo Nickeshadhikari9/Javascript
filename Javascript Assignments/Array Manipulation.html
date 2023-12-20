@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+</head>
+<body>
+    <script>
+        let array=[]
+        for(let i=0;i<size;i++){
+            array[i]=prompt("Enter number:")
+        }
+        let newArray=array.filter((value)=>{
+            return (value%2==0)
+        })
+        alert("Filter array with numbers divisible by 2: "+newArray+"\nOriginal array: "+array)
+    </script>
+</body>
+</html>

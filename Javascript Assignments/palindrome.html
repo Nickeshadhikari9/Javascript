@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+
+<body>
+    <script>
+        let word = prompt("Palindrome Checker.\nEnter a word:");
+        const length = word.length;
+        let reverse="";
+        let character;
+        for (let i = 0; i < length; i++) {
+            word=word.toLowerCase();
+            character = word.charAt(i);
+            reverse = character + reverse;
+        }
+        if (word === reverse) {
+            alert("The word is Palindrome.")
+        }
+        else {
+            alert("The word is not Palindrome.")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ages=[19,22,19,24,20,25,26,24,25,24]
+        console.log(ages.sort())
+        let min=ages[0];
+        for(let i=0;i<ages.length;i++){
+            if(min>ages[i]){
+                min=ages[i]
+            }
+        }
+        console.log(`Minimum age: ${min}`)
+        let max=ages[0];
+        for(let i=0;i<ages.length;i++){
+            if(max<ages[i]){
+                max=ages[i]
+            }
+        }
+        console.log(`Maximum age: ${max}`)
+        const sortedAges=ages.sort();
+        const length=ages.length;
+        let median;
+        if(length%2==0){
+            const num1=sortedAges[(length/2)-1]
+            const num2=sortedAges[length/2]
+            median=(num1+num2)/2;
+        }
+        else{
+            median=sortedAges[Math.floor(length/2)]
+        }
+        console.log(`Median:${median}`)
+        const sum=sortedAges.reduce((value1,value2)=>{
+            return value1+value2;
+        })
+        const average=sum/sortedAges.length;
+        console.log(`Average:${average}`)
+        console.log("Range:"+(max-min))
+        const minavg=Math.abs(min-average)
+        console.log(`min-average:${minavg}`)
+        const maxavg=Math.abs(max-average)
+        console.log(`max-average:${maxavg}`)
+    </script>
+</body>
+</html>
